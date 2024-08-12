@@ -1,0 +1,28 @@
+site_name: trubrics docs
+site_description: AI product analytics.
+theme:
+  name: material
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-2
+        name: Switch to light mode
+  font:
+    text: Montserrat
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Getting Started: index.md
+copyright: Copyright &copy 2024 Trubrics Ltd.
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/trubrics
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/BPKTNxxz
+    
