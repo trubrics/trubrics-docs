@@ -2,12 +2,11 @@ Trubrics is a product analytics platform for AI applications. Product analytics 
 
 **With a few lines of code**, you can start sending all user & AI events to Trubrics. We'll then take care of the rest, and **send you daily insights into your inbox** or slack channel. Simply reply to any insights that you receive, to **customise them to evolve with your business**.
 
-??? question "What are events?"
+??? question "What are user & AI events?"
     User events can be any user click in your app, or a message to your AI assistant. AI events can be the response of an AI assistant, or any action carried out by the AI, such as a database query.
 
-To dive deep into the insights that you receive, you can visit the Trubrics app.
+To dive deep into the insights that you receive, you can visit the [Trubrics app](https://app.trubrics.com).
 
---> *TODO: insert dashboard image*?
 
 ??? question "How does product analytics for AI apps differ from regular product analytics?"
 
