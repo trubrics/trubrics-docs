@@ -18,7 +18,10 @@ theme:
     text: Montserrat
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
+    - navigation.indexes
+
 extra_css:
   - stylesheets/extra.css
 nav:
@@ -29,16 +32,18 @@ nav:
     - Core concepts: new_to_trubrics/core_concepts.md
   - Track user & AI events:
     - SDKs:
+      - track_events/sdks/index.md
       - Python: track_events/sdks/python.md
-      - JS/TS: track_events/sdks/js_ts.md
+      - Node.js: track_events/sdks/node.md
+      - Javascript (Web): track_events/sdks/javascript.md
       - Open AI: track_events/sdks/open_ai.md
     - Integrations:
+      - track_events/integrations/index.md
       - Segment: track_events/integrations/segment.md
       - Amplitude: track_events/integrations/amplitude.md
-  # - API reference:
-  #   - Authentication: index.md
-  #   - JavaScript: index.md
-  #   - REST: index.md
+  - API reference:
+    - Authentication: api_reference/authentication.md
+    - HTTP API: api_reference/api_reference.md
 markdown_extensions:
   - admonition
   - pymdownx.details
