@@ -1,5 +1,5 @@
 site_name: trubrics docs
-site_url: https://docs.trubrics.com/what_is_trubrics/new_to_trubrics
+site_url: https://docs.trubrics.com
 site_description: AI product analytics.
 theme:
   name: material
@@ -49,8 +49,6 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - markdown_include.include:
-      base_path: docs
   - pymdownx.tabbed:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify

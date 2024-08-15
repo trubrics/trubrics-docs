@@ -3,7 +3,7 @@ Once you have reviewed [which events to track](what_to_track.md), you can use on
 
 ## Install SDK
 
-Firstly you need to install one of our SDK's (Python, Node.js, Javascript (web)) in your application:
+Firstly you need to install one of our SDK's (Python, Node.js, Javascript Web) in your application:
 
 === "Javascript/Node.js"
 
@@ -48,7 +48,7 @@ Now ensure that Trubrics is imported & initialised in your app:
     --8<-- "utils/code_snippets/track_signup.py"
     ```
 
-For more information on these 
+For more information on SDK's and how to track events, please refer to the [SDK documentation](../track_events/sdks/index.md).
 
 ## Track AI events (Prompts, Generations, etc.)
 
