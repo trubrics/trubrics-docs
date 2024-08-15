@@ -13,6 +13,6 @@ The Trubrics SDKs are libraries that allow you to track events in your applicati
 - [Javascript (Web)](javascript.md)
 
 ## AI SDK integrations
-- [OpenAI](openai.md)
+- [OpenAI](open_ai.md)
 
 Or use directly our [Rest API](../../api_reference/api_reference.md).

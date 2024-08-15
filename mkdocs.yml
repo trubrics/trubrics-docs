@@ -21,7 +21,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.expand
     - navigation.indexes
-
+    - content.code.copy
+    - content.code.annotate
 extra_css:
   - stylesheets/extra.css
 nav:
@@ -40,7 +41,7 @@ nav:
     - Integrations:
       - track_events/integrations/index.md
       - Segment: track_events/integrations/segment.md
-      - Amplitude: track_events/integrations/amplitude.md
+      # - Amplitude: track_events/integrations/amplitude.md
   - API reference:
     - Authentication: api_reference/authentication.md
     - HTTP API: api_reference/api_reference.md
@@ -48,6 +49,20 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - markdown_include.include:
+      base_path: docs
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: docs
 copyright: Copyright &copy 2024 Trubrics Ltd.
 extra:
   generator: false
@@ -56,4 +71,3 @@ extra:
       link: https://www.linkedin.com/company/trubrics
     - icon: fontawesome/brands/discord
       link: https://discord.gg/BPKTNxxz
-    
