@@ -1,6 +1,6 @@
 trubrics.track({
     event: "Prompt",
-    userId: "unique_user_id",
+    userId: "user_id",
     properties: {
         $text: "tell me a story",
         $threadId: "1234",

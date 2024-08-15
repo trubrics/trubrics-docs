@@ -1,6 +1,6 @@
 trubrics.track(  # use track_sync for synchronous requests
-    user_id="user_id",
     event="prompt",
+    user_id="user_id",
     properties={
         "$text": "tell me a story",
         "$thread_id": "1234",
