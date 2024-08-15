@@ -3,7 +3,7 @@ Once you have reviewed [which events to track](what_to_track.md), you can use on
 
 ## Install SDK
 
-Firstly you need to install one of our SDK's (Python, Node.js, Javascript Web) in your application:
+Firstly you need to install one of our SDK's (Python, Node.js, Javascript Web) in your app:
 
 === "Javascript/Node.js"
 
