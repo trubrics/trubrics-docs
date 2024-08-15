@@ -29,6 +29,7 @@ Now track your events with:
 
 | **Parameter** | **Type** | **Description** | **Required** |
 |---|:---:|---|:---:|
+| `event` | `string` | The name of the event you want to track. | _yes_ |
 | `userId` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
 | `properties` | `object` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
 

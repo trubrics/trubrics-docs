@@ -32,6 +32,8 @@ Now start tacking prompts and generations from OpenAI by adding a single line to
 === "Javascript/Node.js"
 
     ``` ts
+    import OpenAI from "openai";
+
     const openai = new OpenAI({
         apiKey: OPENAI_API_KEY,
         fetch: trubrics.openaiFetch, // (1)!
@@ -39,3 +41,37 @@ Now start tacking prompts and generations from OpenAI by adding a single line to
     ```
 
     1.  Just add this single line!
+
+=== "Python"
+    ``` py
+    # Coming soon
+    ```
+
+## Advanced tracking
+
+While this is all you need to start tracking Open AI messages with Trubrics, enhanced Trubrics features such as Threads will require a [tool](https://platform.openai.com/docs/api-reference/chat/create) to be set in the openai.chat.completions.create() request. This tool will only serve the purpose of transmitting metadata to Trubrics, and will be removed from the request to Open AI.
+
+This tool must be named "Trubrics parameters" and be structured as below. It can be added to an existing list of tools, or as a single tool.
+
+We recommend including a thread ID and a user ID if a user has not already been identified.
+
+``` js
+const completion = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": "Who won the world series in 2020?"},
+    ],
+    tools: [
+        {
+            "type": "function",
+            "function": {
+                "name": "Trubrics parameters",
+                "parameters": {
+                    "threadId": "your-thread-id",
+                    "userId": "your-user-id"
+                }
+            }
+        }
+    ]
+});
+```

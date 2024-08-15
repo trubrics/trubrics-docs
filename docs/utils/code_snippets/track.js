@@ -1,4 +1,5 @@
-trubrics.track("Prompt", {
+trubrics.track({
+    event: "Prompt",
     userId: "unique_user_id",
     properties: {
         $text: "tell me a story",
