@@ -67,8 +67,8 @@ const completion = await openai.chat.completions.create({
             "function": {
                 "name": "Trubrics parameters",
                 "parameters": {
-                    "threadId": "your-thread-id",
-                    "userId": "your-user-id"
+                    "thread_id": "your-thread-id",
+                    "user_id": "your-user-id"
                 }
             }
         }
