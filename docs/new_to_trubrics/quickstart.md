@@ -52,22 +52,4 @@ For more information on SDK's and how to track events, please refer to the [SDK 
 
 ## Track AI events (Prompts, Generations, etc.)
 
-If you are using Open AI, you can start tracking prompts and generations by adding a single line to your OpenAI initializer:
-
-=== "Javascript/Node.js"
-
-    ``` ts
-    import OpenAI from "openai";
-
-    const openai = new OpenAI({
-        apiKey: OPENAI_API_KEY,
-        fetch: trubrics.openaiFetch, // (1)!
-    });
-    ```
-
-    1.  Just add this single line!
-
-=== "Python"
-    ``` py
-    # Coming soon
-    ```
+If you are using Open AI, you can easily [start tracking](open_ai.md) prompts, generations and tool calls.
