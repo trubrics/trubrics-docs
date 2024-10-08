@@ -1,4 +1,4 @@
-To get started collecting events in your application using OpenAI, our SDKs have methods to automate AI event collection with a single line of code.
+To get started collecting events in your application using Azure OpenAI, our SDKs have methods to automate AI event collection with a single line of code.
 
 ??? info "Install SDK"
     === "Javascript/Node.js"
@@ -16,10 +16,10 @@ To get started collecting events in your application using OpenAI, our SDKs have
 Firstly, ensure that Trubrics is imported & initialised in your app:
 
 === "Javascript/Node.js"
-In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:
+In order to automatically detect OpenAI calls, OpenAI must be imported alongside AzureOpenAI:
 
     ``` ts
-    --8<-- "utils/code_snippets/js/init_openai.js"
+    --8<-- "utils/code_snippets/js/init_azure_openai.js"
     ```
 
 === "Python"
