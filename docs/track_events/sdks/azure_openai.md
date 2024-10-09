@@ -19,13 +19,13 @@ Firstly, ensure that Trubrics is imported & initialised in your app:
 In order to automatically detect OpenAI calls, OpenAI must be imported alongside AzureOpenAI:
 
     ``` ts
-    --8<-- "utils/code_snippets/js/init_azure_openai.js"
+    --8<-- "utils/code_snippets/js/azure_openai_init.js"
     ```
 
 === "Python"
 
     ``` py
-    --8<-- "utils/code_snippets/init.py"
+    --8<-- "utils/code_snippets/python/init.py"
     ```
 
 --8<-- "utils/api_key.md"
@@ -37,7 +37,7 @@ The withProperties function wraps around your LLM function and returns the same 
 It takes an additional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
 
     ``` ts
-    --8<-- "utils/code_snippets/js/withProperties.js"
+    --8<-- "utils/code_snippets/js/azure_openai_withProperties.js"
     ```
 
 === "Python"

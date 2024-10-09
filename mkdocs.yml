@@ -38,6 +38,7 @@ nav:
       - Node.js: track_events/sdks/node.md
       - Javascript (Web): track_events/sdks/javascript.md
       - Open AI: track_events/sdks/open_ai.md
+      - Azure Open AI: track_events/sdks/azure_openai.md
     - Integrations:
       - track_events/integrations/index.md
       - Segment: track_events/integrations/segment.md
