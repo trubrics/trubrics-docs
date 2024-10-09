@@ -16,32 +16,33 @@ To get started collecting events in your application using OpenAI, our SDKs have
 Firstly, ensure that Trubrics is imported & initialised in your app:
 
 === "Javascript/Node.js"
-In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:
+    In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:
 
-``` ts
---8<-- "utils/code_snippets/js/openai_init.js"
-```
+    ``` ts
+    --8<-- "utils/code_snippets/js/openai_init.js"
+    ```
 
 === "Python"
-
-``` py
---8<-- "utils/code_snippets/python/init.py"
-```
+    ``` py
+    --8<-- "utils/code_snippets/python/init.py"
+    ```
 
 --8<-- "utils/api_key.md"
 
 Now start tacking prompts, generations and tool calls from OpenAI by using the withProperties wrapper:
 
 === "Javascript/Node.js"
-The withProperties function wraps around your LLM function and returns the same response object as your LLM function.
-It takes an additional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
+    The withProperties function wraps around your LLM function and returns the same response object as your LLM function.
+    It takes an optional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
 
-``` ts
---8<-- "utils/code_snippets/js/openai_withProperties.js"
-```
+    ``` ts
+    --8<-- "utils/code_snippets/js/openai_withProperties.js"
+    ```
 
 === "Python"
 
-``` py
-# Coming soon
-```
+    ``` py
+    # Coming soon
+    ```
+
+--8<-- "utils/trubrics_properties_memo.md"

@@ -54,4 +54,35 @@ For more information on SDK's and how to track events, please refer to the [SDK 
 
 ## Track AI events (Prompts, Generations, etc.)
 
-If you are using Open AI, you can easily [start tracking](open_ai.md) prompts, generations and tool calls.
+If you are using Open AI, you can easily [start tracking](open_ai.md) prompts, generations and tool calls:
+
+=== "Javascript/Node.js"
+    In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:
+
+    ``` ts
+    --8<-- "utils/code_snippets/js/openai_init.js"
+    ```
+
+=== "Python"
+
+    ``` py
+    --8<-- "utils/code_snippets/python/init.py"
+    ```
+
+--8<-- "utils/api_key.md"
+
+Now start tacking prompts, generations and tool calls from OpenAI by using the withProperties wrapper:
+
+=== "Javascript/Node.js"
+    The withProperties function wraps around your LLM function and returns the same response object as your LLM function.
+    It takes an additional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
+
+    ``` ts
+    --8<-- "utils/code_snippets/js/openai_withProperties.js"
+    ```
+
+=== "Python"
+
+    ``` py
+    # Coming soon
+    ```

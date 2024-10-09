@@ -6,3 +6,6 @@ const llmFunction = (messages) => azureOpenai.chat.completions.create({
 });
 
 const completion = await trubrics.withProperties(properties, () => llmFunction(messages));
+
+// Properties can be null
+const completionWithoutProperties = await trubrics.withProperties(null, () => llmFunction(messages));
