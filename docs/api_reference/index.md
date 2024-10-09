@@ -1,0 +1,36 @@
+# API reference
+
+To get started collecting events in your application using Trubrics, consult first our [SDKs](../track_events/sdks). If your language is not supported, you can send events directly to our API:
+
+```bash
+curl -X 'POST' \
+  'https://api.trubrics.com/publish_event?project_api_key=TRUBRICS_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "user_id": "user_id",
+  "event": "LLM generation",
+  "timestamp": "2024-10-09T13:21:46.182Z",
+  "properties": {
+    "$text": "Tell me a joke",
+    "$thread_id": "thread_id",
+    "$assistant_id": "assistant_id",
+    "a_custom_property": "any custom value"
+  }
+}'
+```
+
+The request body should contain the following parameters:
+
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `user_id` | `str` | The distinct ID of the signed in user. | _yes_ |
+| `event` | `str` | The name of the event you are tracking. This can range from "User prompt", "Sign in", "Generation", etc. | _yes_ |
+| `timestamp` | `str` | The timestamp of the event. | _yes_ |
+| `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+
+## Authentication
+This API contains public endpoints only, that will allow your to write to your Trubrics project. The `project_api_key` is a required path parameter to your request.
+
+--8<-- "utils/api_key.md"
+
+--8<-- "utils/trubrics_properties.md"

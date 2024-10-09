@@ -43,8 +43,7 @@ nav:
       - Segment: track_events/integrations/segment.md
       # - Amplitude: track_events/integrations/amplitude.md
   - API reference:
-    - Authentication: api_reference/authentication.md
-    - HTTP API: api_reference/api_reference.md
+    - api_reference/index.md
 markdown_extensions:
   - admonition
   - pymdownx.details
