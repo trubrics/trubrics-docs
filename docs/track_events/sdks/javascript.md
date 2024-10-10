@@ -15,7 +15,7 @@ Initialize the Trubrics SDK in your app:
 
 
 ``` ts
---8<-- "utils/code_snippets/js/init.js"
+--8<-- "utils/code_snippets/js/client_init.js"
 ```
 
 --8<-- "utils/api_key.md"
@@ -24,7 +24,7 @@ Initialize the Trubrics SDK in your app:
 Now track your events with:
 
 ``` ts
---8<-- "utils/code_snippets/js/track.js"
+--8<-- "utils/code_snippets/js/client_track.js"
 ```
 
 | **Parameter** | **Type** | **Description** | **Required** |
