@@ -14,5 +14,6 @@ The Trubrics SDKs are libraries that allow you to track events in your applicati
 
 ## AI SDK integrations
 - [OpenAI](open_ai.md)
+- [Azure OpenAI](azure_openai.md)
 
 Or use directly our [Rest API](../../api_reference/api_reference.md).
