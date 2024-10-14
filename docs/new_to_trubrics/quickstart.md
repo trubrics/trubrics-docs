@@ -54,7 +54,7 @@ For more information on SDK's and how to track events, please refer to the [SDK 
 
 ## Track AI events (Prompts, Generations, etc.)
 
-If you are using Open AI, you can easily [start tracking](open_ai.md) prompts, generations and tool calls:
+If you are using Open AI, you can easily [start tracking](../track_events/sdks/open_ai.md) prompts, generations and tool calls:
 
 === "Javascript/Node.js"
     In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:

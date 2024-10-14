@@ -37,8 +37,20 @@ nav:
       - Python: track_events/sdks/python.md
       - Node.js: track_events/sdks/node.md
       - Javascript (Web): track_events/sdks/javascript.md
-      - Open AI: track_events/sdks/open_ai.md
+      - Aleph Alpha: track_events/sdks/aleph_alpha.md
+      - Amazon SageMaker: track_events/sdks/amazon_sagemaker.md
       - Azure Open AI: track_events/sdks/azure_openai.md
+      - HuggingFace Transformers: track_events/sdks/huggingface.md
+      - IBM watsonx: track_events/sdks/ibm_watsonx.md
+      - Mistral AI: track_events/sdks/mistral_ai.md
+      - Ollama: track_events/sdks/ollama.md
+      - Open AI: track_events/sdks/open_ai.md
+      - Replicate: track_events/sdks/replicate.md
+      - together.ai: track_events/sdks/together_ai.md
+      - Burr: track_events/sdks/burr.md
+      - Haystack: track_events/sdks/haystack.md
+      - LangChain: track_events/sdks/langchain.md
+      - LlamaIndex: track_events/sdks/llamaindex.md
     - Integrations:
       - track_events/integrations/index.md
       - Segment: track_events/integrations/segment.md
