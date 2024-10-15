@@ -1,4 +1,4 @@
-To get started collecting events in your application using OpenAI, our SDKs have methods to automate AI event collection with a single line of code.
+To get started collecting events in your application using Azure OpenAI, our SDKs have methods to automate AI event collection with a single line of code.
 
 ??? info "Install SDK"
     === "Javascript/Node.js"
@@ -16,27 +16,28 @@ To get started collecting events in your application using OpenAI, our SDKs have
 Firstly, ensure that Trubrics is imported & initialised in your app:
 
 === "Javascript/Node.js"
-    In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:
+    In order to automatically detect OpenAI calls, OpenAI must be imported alongside AzureOpenAI:
 
     ``` ts
-    --8<-- "utils/code_snippets/js/openai_init.js"
+    --8<-- "utils/code_snippets/js/azure_openai_init.js"
     ```
 
 === "Python"
+
     ``` py
     --8<-- "utils/code_snippets/python/init.py"
     ```
 
 --8<-- "utils/api_key.md"
 
-Now start tacking prompts, generations and tool calls from OpenAI by using the withProperties wrapper:
+Now start tacking prompts, generations and tool calls from Azure OpenAI by using the withProperties wrapper:
 
 === "Javascript/Node.js"
     The withProperties function wraps around your LLM function and returns the same response object as your LLM function.
-    It takes an optional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
+    It takes an additional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
 
     ``` ts
-    --8<-- "utils/code_snippets/js/openai_withProperties.js"
+    --8<-- "utils/code_snippets/js/azure_openai_withProperties.js"
     ```
 
 === "Python"
