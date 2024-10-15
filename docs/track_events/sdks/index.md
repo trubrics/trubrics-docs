@@ -14,18 +14,23 @@ The Trubrics SDKs are libraries that allow you to track events in your applicati
 
 ## AI SDK integrations
 - [Aleph Alpha](aleph_alpha.md)
+- [Amazon Bedrock](amazon_bedrock.md)
 - [Amazon SageMaker](amazon_sagemaker.md)
+- [Anthropic](anthropic.md)
 - [Azure OpenAI](azure_openai.md)
+- [Burr](burr.md)
+- [Cohere](cohere.md)
+- [Google Gemini](google_gemini.md)
+- [Google VertexAI](google_vertexai.md)
+- [Haystack](haystack.md)
 - [HuggingFace Transformers](huggingface.md)
 - [IBM watsonx](ibm_watsonx.md)
+- [LangChain](langchain.md)
+- [LlamaIndex](llamaindex.md)
 - [Mistral AI](mistral_ai.md)
 - [Ollama](ollama.md)
 - [OpenAI](open_ai.md)
 - [Replicate](replicate.md)
 - [together.ai](together_ai.md)
-- [Burr](burr.md)
-- [Haystack](haystack.md)
-- [LangChain](langchain.md)
-- [LlamaIndex](llamaindex.md)
 
 Or use directly our [Rest API](../../api_reference/api_reference.md).
