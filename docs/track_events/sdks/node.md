@@ -5,17 +5,17 @@ Here we'll cover how to collect events from your server side side web applicatio
 Firstly, install Trubrics in your project with:
 
 ```bash
-npm i @trubrics/trubrics
+--8<-- "utils/code_snippets/js/install_npm.md"
 ```
 
 
-## Getting started
+## Getting started in Node
 
 Initialize the Trubrics SDK in your app:
 
 
 ``` ts
---8<-- "utils/code_snippets/init.js"
+--8<-- "utils/code_snippets/js/init.js"
 ```
 
 --8<-- "utils/api_key.md"
@@ -24,7 +24,7 @@ Initialize the Trubrics SDK in your app:
 Now track your events with:
 
 ``` ts
---8<-- "utils/code_snippets/track.js"
+--8<-- "utils/code_snippets/js/track.js"
 ```
 
 | **Parameter** | **Type** | **Description** | **Required** |
