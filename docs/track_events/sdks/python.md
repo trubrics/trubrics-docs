@@ -5,16 +5,16 @@ Here we'll cover how to collect events in python. Our SDK calls are non-blocking
 Firstly, install Trubrics in your `venv` with:
 
 ``` bash
---8<-- "utils/code_snippets/install_pip.md"
+--8<-- "utils/code_snippets/python/install_pip.md"
 ```
 
 ## Getting started in python
 Track your events with:
 
 ``` py
---8<-- "utils/code_snippets/init.py"
+--8<-- "utils/code_snippets/python/init.py"
 
---8<-- "utils/code_snippets/track.py"
+--8<-- "utils/code_snippets/python/track.py"
 ```
 
 --8<-- "utils/api_key.md"
