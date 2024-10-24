@@ -6,31 +6,18 @@ The Trubrics SDKs are libraries that allow you to track events in your applicati
     We recommend using server-side SDKs for tracking events in your application. The main reason for this is because that is where the majority of your business logic / AI properties are stored. Modern web browsers are also making it increasingly difficult to track events, meaning that your event tracking will be less accurate on the client side.
 
 ## Server side SDKs
-- [Python](python.md)
-- [Node.js](node.md)
+
+### Python
+- [Getting started](python.md)
+- [LLM tracking](python_llm_tracking.md)
+- [Adding attributes](python_attributes.md)
+
+### Node.js
+- [Getting started](node.md)
+- [LLM tracking](node_llm_tracking.md)
+- [Adding attributes](node_attributes.md)
 
 ## Client side SDKs
 - [Javascript (Web)](javascript.md)
-
-## AI SDK integrations
-- [Aleph Alpha](aleph_alpha.md)
-- [Amazon Bedrock](amazon_bedrock.md)
-- [Amazon SageMaker](amazon_sagemaker.md)
-- [Anthropic](anthropic.md)
-- [Azure OpenAI](azure_openai.md)
-- [Burr](burr.md)
-- [Cohere](cohere.md)
-- [Google Gemini](google_gemini.md)
-- [Google VertexAI](google_vertexai.md)
-- [Haystack](haystack.md)
-- [HuggingFace Transformers](huggingface.md)
-- [IBM watsonx](ibm_watsonx.md)
-- [LangChain](langchain.md)
-- [LlamaIndex](llamaindex.md)
-- [Mistral AI](mistral_ai.md)
-- [Ollama](ollama.md)
-- [OpenAI](open_ai.md)
-- [Replicate](replicate.md)
-- [together.ai](together_ai.md)
 
 Or use directly our [Rest API](../../api_reference/api_reference.md).
