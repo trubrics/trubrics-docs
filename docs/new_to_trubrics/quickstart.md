@@ -8,12 +8,13 @@ Firstly you need to install one of our SDK's (Python, Node.js, Javascript Web) i
 === "Javascript/Node.js"
 
     ```bash
-    --8<-- "utils/code_snippets/install_npm.md"
+    --8<-- "utils/code_snippets/js/install_npm.md"
     ```
 
 === "Python"
+
     ```bash
-    --8<-- "utils/code_snippets/install_pip.md"
+    --8<-- "utils/code_snippets/python/install_pip.md"
     ```
 
 
@@ -22,14 +23,15 @@ Firstly you need to install one of our SDK's (Python, Node.js, Javascript Web) i
 Now ensure that Trubrics is imported & initialised in your app:
 
 === "Javascript/Node.js"
-    
+  
     ``` ts
-    --8<-- "utils/code_snippets/init.js"
+    --8<-- "utils/code_snippets/js/init.js"
     ```
 
 === "Python"
+
     ``` py
-    --8<-- "utils/code_snippets/init.py"
+    --8<-- "utils/code_snippets/python/init.py"
     ```
 
 --8<-- "utils/api_key.md"
@@ -39,35 +41,48 @@ Now ensure that Trubrics is imported & initialised in your app:
 === "Javascript/Node.js"
 
     ``` ts
-    --8<-- "utils/code_snippets/track_signup.js"
+    --8<-- "utils/code_snippets/js/track_signup.js"
     ```
 
 === "Python"
     
     ``` py
-    --8<-- "utils/code_snippets/track_signup.py"
+    --8<-- "utils/code_snippets/python/track_signup.py"
     ```
 
 For more information on SDK's and how to track events, please refer to the [SDK documentation](../track_events/sdks/index.md).
 
 ## Track AI events (Prompts, Generations, etc.)
 
-If you are using Open AI, you can start tracking prompts and generations by adding a single line to your OpenAI initializer:
+If you are using Open AI, you can easily [start tracking](../track_events/sdks/open_ai.md) prompts, generations and tool calls:
 
 === "Javascript/Node.js"
+    In order to automatically detect LLM calls, your LLM SDK must be fed into the Trubrics constructor:
 
     ``` ts
-    import OpenAI from "openai";
-
-    const openai = new OpenAI({
-        apiKey: OPENAI_API_KEY,
-        fetch: trubrics.openaiFetch, // (1)!
-    });
+    --8<-- "utils/code_snippets/js/openai_init.js"
     ```
 
-    1.  Just add this single line!
+=== "Python"
+
+    ``` py
+    --8<-- "utils/code_snippets/python/init.py"
+    ```
+
+--8<-- "utils/api_key.md"
+
+Now start tacking prompts, generations and tool calls from OpenAI by using the withProperties wrapper:
+
+=== "Javascript/Node.js"
+    The withProperties function wraps around your LLM function and returns the same response object as your LLM function.
+    It takes an additional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
+
+    ``` ts
+    --8<-- "utils/code_snippets/js/openai_withProperties.js"
+    ```
 
 === "Python"
+
     ``` py
     # Coming soon
     ```
