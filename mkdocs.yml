@@ -42,7 +42,6 @@ nav:
         - Node.js:
           - Getting started: track_events/sdks/node.md
           - LLM tracking: track_events/sdks/node_llm_tracking.md
-          - Adding attributes: track_events/sdks/node_attributes.md
       - Client-side tracking:
         - Javascript (Web): track_events/sdks/javascript.md
     - Integrations:
