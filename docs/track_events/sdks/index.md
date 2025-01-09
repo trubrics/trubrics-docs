@@ -15,7 +15,6 @@ The Trubrics SDKs are libraries that allow you to track events in your applicati
 ### Node.js
 - [Getting started](node.md)
 - [LLM tracking](node_llm_tracking.md)
-- [Adding attributes](node_attributes.md)
 
 ## Client side SDKs
 - [Javascript (Web)](javascript.md)
