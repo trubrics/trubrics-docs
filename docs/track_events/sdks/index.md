@@ -19,4 +19,4 @@ The Trubrics SDKs are libraries that allow you to track events in your applicati
 ## Client side SDKs
 - [Javascript (Web)](javascript.md)
 
-Or use directly our [Rest API](../../api_reference/api_reference.md).
+Or use directly our [Rest API](../../api_reference/index.md).

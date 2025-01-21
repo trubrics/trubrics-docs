@@ -78,7 +78,7 @@ Now start tacking prompts, generations and tool calls from OpenAI by using the w
     It takes an additional properties dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
 
     ``` ts
-    --8<-- "utils/code_snippets/js/openai_withProperties.js"
+    --8<-- "utils/code_snippets/js/withProperties.js"
     ```
 
 === "Python"
