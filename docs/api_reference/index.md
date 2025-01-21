@@ -4,8 +4,9 @@ To get started collecting events in your application using Trubrics, consult fir
 
 ```bash
 curl -X 'POST' \
-  'https://api.trubrics.com/publish_event?project_api_key=TRUBRICS_API_KEY' \
+  'https://app.trubrics.com/api/ingestion/publish_event' \
   -H 'Content-Type: application/json' \
+  -H 'x-api-key: TRUBRICS_API_KEY' \
   -d '{
   "user_id": "user_id",
   "event": "LLM generation",
@@ -29,7 +30,7 @@ The request body should contain the following parameters:
 | `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
 
 ## Authentication
-This API contains public endpoints only, that will allow your to write to your Trubrics project. The `project_api_key` is a required path parameter to your request.
+This API contains public endpoints only, that will allow your to write to your Trubrics project. The `x_api_key` is a required header for your request.
 
 --8<-- "utils/api_key.md"
 
