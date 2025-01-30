@@ -29,7 +29,8 @@ nav:
     - What events to track?: new_to_trubrics/what_to_track.md
     - Core concepts: new_to_trubrics/core_concepts.md
   - Guide:
-    - SDKs: - track_events/sdks/index.md
+    - SDKs:
+      - track_events/sdks/index.md
     - Integrations:
       - Segment: track_events/integrations/segment.md
   - API reference:
