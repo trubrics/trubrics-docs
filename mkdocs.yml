@@ -17,7 +17,6 @@ theme:
   font:
     text: Montserrat
   features:
-    # - navigation.expand
     - navigation.indexes
     - content.code.copy
     - content.code.annotate
