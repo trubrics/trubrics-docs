@@ -24,7 +24,7 @@ Initialize the Trubrics SDK in your app:
 Now track your events with:
 
 ``` ts
---8<-- "utils/code_snippets/js/track.js"
+--8<-- "utils/code_snippets/js/track_signup.js"
 ```
 
 | **Parameter** | **Type** | **Description** | **Required** |

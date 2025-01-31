@@ -14,7 +14,7 @@ Track your events with:
 ``` py
 --8<-- "utils/code_snippets/python/init.py"
 
---8<-- "utils/code_snippets/python/track.py"
+--8<-- "utils/code_snippets/python/track_signup.py"
 ```
 
 --8<-- "utils/api_key.md"
