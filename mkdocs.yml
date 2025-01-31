@@ -28,11 +28,10 @@ nav:
     - What is Trubrics?: new_to_trubrics/what_is_trubrics.md
     - What events to track?: new_to_trubrics/what_to_track.md
     - Core concepts: new_to_trubrics/core_concepts.md
-  - Guide:
-    - SDKs:
-      - track_events/sdks/index.md
-    - Integrations:
-      - Segment: track_events/integrations/segment.md
+  - SDKs:
+    - track_events/sdks/index.md
+  - Integrations:
+    - Segment: track_events/integrations/segment.md
   - API reference:
     - api_reference/index.md
 markdown_extensions:
