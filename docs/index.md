@@ -50,8 +50,6 @@ Now ensure that Trubrics is imported & initialised in your app:
     --8<-- "utils/code_snippets/python/track_signup.py"
     ```
 
-For more information on SDK's and how to track events, please refer to the [SDK documentation](../track_events/sdks/index.md).
-
 ## Track LLM events (Prompts and Generations)
 
 === "Javascript"
@@ -65,3 +63,5 @@ For more information on SDK's and how to track events, please refer to the [SDK 
     ``` py
     --8<-- "utils/code_snippets/python/track_llm.py"
     ```
+
+For more information on SDK's and how to track events, please refer to the [SDK documentation](./track_events/sdks/index.md).

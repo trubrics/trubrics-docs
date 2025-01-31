@@ -24,6 +24,7 @@ Track your events with:
 | `user_id` | `str` | The distinct ID of the user that is signed in to your app. | _yes_ |
 | `event` | `str` | The name of the event you are tracking. This can range from "User prompt", "Sign in", "Generation", etc. | _yes_ |
 | `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `timestamp` | `datetime` | The timestamp of the event. This defaults to the current timestamp | _no_ |
 
 
 If you have not implemented auth, use a [UUID](https://docs.python.org/3/library/uuid.html#uuid.uuid4) to assign events to an anonymous user.

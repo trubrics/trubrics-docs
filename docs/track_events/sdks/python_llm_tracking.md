@@ -1,119 +1,21 @@
-Here we'll cover how to automatically track events from LLM models in python. Events such as prompts, generations and tool calls can be captured with just a few lines of code.
+Here we'll cover how to automatically track prompts and generations from an LLM in Python.
 
-## Foundation models
+Track your LLM events with:
 
-=== "Azure OpenAI"
+``` ts
+--8<-- "utils/code_snippets/python/track_llm.py"
+```
 
-    ``` py
-    # Coming soon
-    ```
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
+| `prompt` | `string` | The user's message. | _yes_ |
+| `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
+| `generation` | `string` | The assistant's response. | _yes_ |
+| `properties` | `dict[str,any]` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `timestamp` | `datetime` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
+| `latency` | `int` | The time in milliseconds between the prompt and generation. This defaults to 1 | _no_ |
 
-=== "Aleph Alpha"
+If you have not implemented auth, use a [UUID](https://www.npmjs.com/package/uuid) to assign events to an anonymous user.
 
-    ``` py
-    # Coming soon
-    ```
-
-=== "Anthropic"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Amazon Bedrock"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Amazon Sagemaker"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Cohere"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "IBM Watson"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Google Gemini"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Google VertexAI"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Mistral AI"
-
-    ``` py
-    # Coming soon
-    ``` 
-
-=== "Ollama"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "OpenAI"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Replicate"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "together.ai"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "HuggingFace Transformers"
-
-    ``` py
-    # Coming soon
-    ```
-
-## Frameworks
-
-=== "Burr"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Haystack by deepset"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "Langchain"
-
-    ``` py
-    # Coming soon
-    ```
-
-=== "LlamaIndex"
-
-    ``` py
-    # Coming soon
-    ```
+--8<-- "utils/trubrics_properties.md"

@@ -1,122 +1,21 @@
-Here we'll cover how to automatically track events from LLM models in Node.js. Events such as prompts, generations and tool calls can be captured with just a few lines of code.
+Here we'll cover how to automatically track prompts and generations from an LLM in Javascript.
 
-## Initialization
-
-Trubrics must be initialized with your LLM client. This helps make the automatic tracking more accurate.
-
-### Foundation models
-
-=== "Azure OpenAI"
-
-    OpenAI must be imported alongside AzureOpenAI:
-
-    ``` ts
-    --8<-- "utils/code_snippets/js/azure_openai_init.js"
-    ```
-
-=== "Anthropic"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Amazon Bedrock"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Amazon Sagemaker"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Cohere"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "IBM Watson"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Google Gemini"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Google VertexAI"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Mistral AI"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "Ollama"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "OpenAI"
-
-    ``` ts
-    --8<-- "utils/code_snippets/js/openai_init.js"
-    ```
-
-=== "Replicate"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "together.ai"
-
-    ``` ts
-    // Coming soon
-    ```
-
-=== "HuggingFace Transformers"
-
-    ``` ts
-    // Coming soon
-    ```
-
-### Frameworks
-
-=== "Langchain"
-
-    Your LLM client must be imported alongside other LangChain imports:
-
-    ``` ts
-    --8<-- "utils/code_snippets/js/langchain_init.js"
-    ```
-
-=== "LlamaIndex"
-
-    ``` ts
-    // Coming soon
-    ```
-
-## Tracking
-
-You can now start tracking prompts, generations and tool calls by using the `withProperties` wrapper.
-
-The `withProperties` function wraps around your LLM function and returns the same response object as your LLM function.
-It takes an optional `properties` dictionary, which allows you to add context to your LLM events such as user ID's and thread ID's.
+Track your LLM events with:
 
 ``` ts
---8<-- "utils/code_snippets/js/withProperties.js"
+--8<-- "utils/code_snippets/js/track_llm.js"
 ```
 
---8<-- "utils/trubrics_properties_memo.md"
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
+| `prompt` | `string` | The user's message. | _yes_ |
+| `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
+| `generation` | `string` | The assistant's response. | _yes_ |
+| `properties` | `Record<string, any>` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `timestamp` | `Date` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
+| `latency` | `number` | The time in milliseconds between the prompt and generation. This defaults to 1 | _no_ |
+
+If you have not implemented auth, use a [UUID](https://www.npmjs.com/package/uuid) to assign events to an anonymous user.
+
+--8<-- "utils/trubrics_properties.md"
