@@ -1,4 +1,4 @@
-Here we'll cover how to collect events from your server side side web application. Our [Node.js](https://www.npmjs.com/package/@trubrics/trubrics) library is designed to be non-blocking and fast, meaning it won't get in the way of your app's performance. Here's how to get started:
+Here we'll cover how to collect events from your Javascript application. Our [Javascript](https://www.npmjs.com/package/@trubrics/trubrics) library is designed to be non-blocking and fast, meaning it won't get in the way of your app's performance. Here's how to get started:
 
 ## Install
 
