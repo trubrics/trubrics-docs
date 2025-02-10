@@ -7,5 +7,5 @@ trubrics.trackLLM({
         context: "Chat window",
     },
     timestamp: new Date(),
-    latency: 2000
+    latency: 2
 });

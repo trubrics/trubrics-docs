@@ -45,9 +45,9 @@ Or specify your own logger completely:
 --8<-- "utils/code_snippets/python/logger_custom.py"
 ```
 
-## Track events
+## Track user events
 
-Finally, track your events with:
+Finally, track any user action events with:
 
 ``` py
 --8<-- "utils/code_snippets/python/track_signup.py"
@@ -63,14 +63,6 @@ Finally, track your events with:
 | `timestamp` | `datetime` | The timestamp of the event. This defaults to the current timestamp | _no_ |
 
 </div>
-
---8<-- "utils/trubrics_properties.md"
-
-To ensure all events are flushed before terminating your app, you may call the close function:
-
-``` py
---8<-- "utils/code_snippets/python/close.py"
-```
 
 ## Track LLM events
 
@@ -93,3 +85,12 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `latency` | `float` | The time in seconds between the prompt and generation. This defaults to 1 | _no_ |
 
 </div>
+
+
+--8<-- "utils/trubrics_properties.md"
+
+To ensure all events are flushed before terminating your app, you may call the close function:
+
+``` py
+--8<-- "utils/code_snippets/python/close.py"
+```

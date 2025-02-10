@@ -33,9 +33,9 @@ Initialize the Trubrics SDK in your app:
 
 </div>
 
-## Track events
+## Track user events
 
-Finally, track your events with:
+Finally, track any user action events with:
 
 ``` ts
 --8<-- "utils/code_snippets/js/track_signup.js"
@@ -51,8 +51,6 @@ Finally, track your events with:
 | `timestamp` | `Date` | The timestamp of the event. This defaults to the current timestamp | _no_ |
 
 </div>
-
---8<-- "utils/trubrics_properties.md"
 
 # Javascript LLM tracking
 
@@ -75,3 +73,6 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `latency` | `number` | The time in seconds between the prompt and generation. This defaults to 1 | _no_ |
 
 </div>
+
+
+--8<-- "utils/trubrics_properties.md"
