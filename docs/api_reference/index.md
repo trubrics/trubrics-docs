@@ -1,6 +1,6 @@
 # API reference
 
-To get started collecting events in your application using Trubrics, consult first our [SDKs](../track_events/sdks). If your language is not supported, you can send events directly to our API:
+To get started collecting events in your application using Trubrics, consult first our [Javascript SDK](../track_events/sdks/javascript.md) or [Python SDK](../track_events/sdks/python.md). If your language is not supported, you can send events directly to our API:
 
 ```bash
 curl -X 'POST' \
