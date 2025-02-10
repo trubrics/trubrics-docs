@@ -1,6 +1,8 @@
+# Python
+
 Here we'll cover how to collect events in python. Our SDK calls are non-blocking and fast, meaning they won't get in the way of your python app's performance.
 
-## Install (requires python>3.8)
+## Install (requires python>3.10)
 
 Firstly, install Trubrics in your `venv` with:
 
@@ -18,12 +20,16 @@ Then, initialise the SDK
 
 --8<-- "utils/api_key.md"
 
+<div class="no-wrap-table" markdown>
+
 | **Parameter** | **Type** | **Description** | **Required** |
 |---|:---:|---|:---:|
 | `api_key` | `str` | Your project API key. | _yes_ |
 | `flush_interval` | `int` | Time in seconds between automatic flushes (default: 10) | _no_ |
 | `flush_at` | `int` | Number of events that trigger a flush (default: 20) | _no_ |
 | `logger` | `logging.Logger` | A custom logger | _no_ |
+
+</div>
 
 The client uses python's logging library to log messages, by default at the ERROR level.
 
@@ -47,6 +53,8 @@ Finally, track your events with:
 --8<-- "utils/code_snippets/python/track_signup.py"
 ```
 
+<div class="no-wrap-table" markdown>
+
 | **Parameter** | **Type** | **Description** | **Required** |
 |---|:---:|---|:---:|
 | `user_id` | `str` | The distinct ID of the user that is signed in to your app. | _yes_ |
@@ -54,8 +62,34 @@ Finally, track your events with:
 | `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
 | `timestamp` | `datetime` | The timestamp of the event. This defaults to the current timestamp | _no_ |
 
-If you have not implemented auth, use a [UUID](https://docs.python.org/3/library/uuid.html#uuid.uuid4) to assign events to an anonymous user.
+</div>
 
 --8<-- "utils/trubrics_properties.md"
 
-To ensure all events are flushed before 
+To ensure all events are flushed before terminating your app, you may call the close function:
+
+``` py
+--8<-- "utils/code_snippets/python/close.py"
+```
+
+## Track LLM events
+
+In addition to regular events, you may track LLM events (prompts and generations) with:
+
+``` ts
+--8<-- "utils/code_snippets/python/track_llm.py"
+```
+
+<div class="no-wrap-table" markdown>
+
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
+| `prompt` | `string` | The user's message. | _yes_ |
+| `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
+| `generation` | `string` | The assistant's response. | _yes_ |
+| `properties` | `dict[str,any]` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `timestamp` | `datetime` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
+| `latency` | `int` | The time in milliseconds between the prompt and generation. This defaults to 1 | _no_ |
+
+</div>

@@ -28,8 +28,8 @@ nav:
     - What is Trubrics?: new_to_trubrics/what_is_trubrics.md
     - What events to track?: new_to_trubrics/what_to_track.md
     - Core concepts: new_to_trubrics/core_concepts.md
-  - SDKs:
-    - track_events/sdks/index.md
+  - Javascript SDK: track_events/sdks/javascript.md
+  - Python SDK: track_events/sdks/python.md
   - Integrations:
     - Segment: track_events/integrations/segment.md
   - API reference:

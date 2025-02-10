@@ -1,0 +1,77 @@
+# Javascript
+
+Here we'll cover how to collect events from your Javascript application. Our [Javascript](https://www.npmjs.com/package/@trubrics/trubrics) library is designed to be non-blocking and fast, meaning it won't get in the way of your app's performance. It is compatible with client side Javascript as well as server side Node.js. Here's how to get started:
+
+## Install
+
+Firstly, install Trubrics in your project with:
+
+```bash
+--8<-- "utils/code_snippets/js/install_npm.md"
+```
+
+
+## Initialise Trubrics
+
+Initialize the Trubrics SDK in your app:
+
+
+``` ts
+--8<-- "utils/code_snippets/js/init_optionals.js"
+```
+
+--8<-- "utils/api_key.md"
+
+<div class="no-wrap-table" markdown>
+
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `apiKey` | `string` | Your project API key. | _yes_ |
+| `flushInterval` | `number` | Time in ms between automatic flushes (default: 10000) | _no_ |
+| `flushAt` | `number` | Number of events that trigger a flush (default: 20) | _no_ |
+| `isVerbose` | `boolean` | Flag to enable verbose logging (default: false) | _no_ |
+
+</div>
+
+## Track events
+
+Finally, track your events with:
+
+``` ts
+--8<-- "utils/code_snippets/js/track_signup.js"
+```
+
+<div class="no-wrap-table" markdown>
+
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `event` | `string` | The name of the event you want to track. | _yes_ |
+| `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
+| `properties` | `object` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `timestamp` | `Date` | The timestamp of the event. This defaults to the current timestamp | _no_ |
+
+</div>
+
+--8<-- "utils/trubrics_properties.md"
+
+# Javascript LLM tracking
+
+In addition to regular events, you may track LLM events (prompts and generations) with:
+
+``` ts
+--8<-- "utils/code_snippets/js/track_llm.js"
+```
+
+<div class="no-wrap-table" markdown>
+
+| **Parameter** | **Type** | **Description** | **Required** |
+|---|:---:|---|:---:|
+| `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
+| `prompt` | `string` | The user's message. | _yes_ |
+| `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
+| `generation` | `string` | The assistant's response. | _yes_ |
+| `properties` | `Record<string, any>` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `timestamp` | `Date` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
+| `latency` | `number` | The time in milliseconds between the prompt and generation. This defaults to 1 | _no_ |
+
+</div>

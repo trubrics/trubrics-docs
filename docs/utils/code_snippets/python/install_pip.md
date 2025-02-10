@@ -1,1 +1,1 @@
-pip install trubrics-beta
+pip install trubrics
