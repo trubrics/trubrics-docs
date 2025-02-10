@@ -21,8 +21,3 @@ You should then look to add `properties` to each event to give context to the ev
 
 - **Converted:**
     - **Plan** - if the event signals a user moving to a paid plan, you could add a property of the plan selected.
-
-
-## Whats next?
-
-See how you can collect these four events [here](quickstart.md), with a few lines of code added to your app!

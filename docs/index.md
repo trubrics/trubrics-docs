@@ -1,15 +1,64 @@
-#
+## Install SDK
 
-<p align="center">
-  <a href="https://trubrics.com"><img src="static/logo-long.png" alt="trubrics-logo"></a>
-</p>
-<p align="center">
-    <em>Product analytics for AI applications, delivered to you.</em>
-</p>
+Firstly you need to install one of our SDK's in your application:
 
-## Getting started
+=== "Javascript"
 
-- [What is Trubrics?](new_to_trubrics/what_is_trubrics.md)
-- [What events to track?](new_to_trubrics/what_to_track.md)
-- [Quickstart](new_to_trubrics/quickstart.md)
-- [Core concepts](new_to_trubrics/core_concepts.md)
+    ```bash
+    --8<-- "utils/code_snippets/js/install_npm.md"
+    ```
+
+=== "Python"
+
+    ```bash
+    --8<-- "utils/code_snippets/python/install_pip.md"
+    ```
+
+
+## Initialise SDK and authenticate with Trubrics
+
+Now ensure that Trubrics is imported & initialised in your app:
+
+=== "Javascript"
+  
+    ``` ts
+    --8<-- "utils/code_snippets/js/init_trubrics.js"
+    ```
+
+=== "Python"
+
+    ``` py
+    --8<-- "utils/code_snippets/python/init.py"
+    ```
+
+--8<-- "utils/api_key.md"
+
+## Track user events (Sign Up, Conversion, etc.)
+
+=== "Javascript"
+
+    ``` ts
+    --8<-- "utils/code_snippets/js/track_signup.js"
+    ```
+
+=== "Python"
+    
+    ``` py
+    --8<-- "utils/code_snippets/python/track_signup.py"
+    ```
+
+## Track LLM events (Prompts and Generations)
+
+=== "Javascript"
+
+    ``` ts
+    --8<-- "utils/code_snippets/js/track_llm.js"
+    ```
+
+=== "Python"
+
+    ``` py
+    --8<-- "utils/code_snippets/python/track_llm.py"
+    ```
+
+For more information on SDK's and how to track events, please refer to the [Javascript SDK](./track_events/sdks/javascript.md) or [Python SDK](./track_events/sdks/python.md).

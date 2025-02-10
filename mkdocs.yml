@@ -1,4 +1,4 @@
-site_name: trubrics docs
+site_name: Trubrics docs
 site_url: https://docs.trubrics.com
 site_description: AI product analytics.
 theme:
@@ -17,37 +17,21 @@ theme:
   font:
     text: Montserrat
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.expand
     - navigation.indexes
     - content.code.copy
     - content.code.annotate
 extra_css:
   - stylesheets/extra.css
 nav:
+  - Quickstart: index.md
   - New to Trubrics?:
     - What is Trubrics?: new_to_trubrics/what_is_trubrics.md
     - What events to track?: new_to_trubrics/what_to_track.md
-    - Quickstart: new_to_trubrics/quickstart.md
     - Core concepts: new_to_trubrics/core_concepts.md
-  - Track user & AI events:
-    - SDKs:
-      - track_events/sdks/index.md
-      - Server-side tracking:
-        - Python:
-          - Getting started: track_events/sdks/python.md
-          - LLM tracking: track_events/sdks/python_llm_tracking.md
-          - Adding attributes: track_events/sdks/python_attributes.md
-        - Node.js:
-          - Getting started: track_events/sdks/node.md
-          - LLM tracking: track_events/sdks/node_llm_tracking.md
-      - Client-side tracking:
-        - Javascript (Web): track_events/sdks/javascript.md
-    - Integrations:
-      - track_events/integrations/index.md
-      - Segment: track_events/integrations/segment.md
-      # - Amplitude: track_events/integrations/amplitude.md
+  - Javascript SDK: track_events/sdks/javascript.md
+  - Python SDK: track_events/sdks/python.md
+  - Integrations:
+    - Segment: track_events/integrations/segment.md
   - API reference:
     - api_reference/index.md
 markdown_extensions:
@@ -66,6 +50,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path: docs
+  - md_in_html
 copyright: Copyright &copy 2024 Trubrics Ltd.
 extra:
   generator: false
