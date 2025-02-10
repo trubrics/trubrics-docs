@@ -86,11 +86,12 @@ In addition to regular events, you may track LLM events (prompts and generations
 
 </div>
 
-
---8<-- "utils/trubrics_properties.md"
+## Closing the client
 
 To ensure all events are flushed before terminating your app, you may call the close function:
 
 ``` py
 --8<-- "utils/code_snippets/python/close.py"
 ```
+
+--8<-- "utils/trubrics_properties.md"
