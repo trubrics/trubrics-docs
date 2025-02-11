@@ -82,7 +82,7 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `generation` | `string` | The assistant's response. | _yes_ |
 | `properties` | `dict[str,any]` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
 | `timestamp` | `datetime` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
-| `latency` | `float` | The time in seconds between the prompt and generation. This defaults to 1 | _no_ |
+| `latency` | `float` | The time in seconds between the prompt and generation | _no_ |
 
 </div>
 

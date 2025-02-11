@@ -10,11 +10,9 @@ Firstly, install Trubrics in your project with:
 --8<-- "utils/code_snippets/js/install_npm.md"
 ```
 
-
 ## Initialise Trubrics
 
-Initialize the Trubrics SDK in your app:
-
+Then, initialize the Trubrics SDK in your app:
 
 ``` ts
 --8<-- "utils/code_snippets/js/init_optionals.js"
@@ -52,7 +50,7 @@ Finally, track any user action events with:
 
 </div>
 
-# Javascript LLM tracking
+## Track LLM events
 
 In addition to regular events, you may track LLM events (prompts and generations) with:
 
@@ -70,9 +68,8 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `generation` | `string` | The assistant's response. | _yes_ |
 | `properties` | `Record<string, any>` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
 | `timestamp` | `Date` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
-| `latency` | `number` | The time in seconds between the prompt and generation. This defaults to 1 | _no_ |
+| `latency` | `number` | The time in seconds between the prompt and generation | _no_ |
 
 </div>
-
 
 --8<-- "utils/trubrics_properties.md"
