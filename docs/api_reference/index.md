@@ -29,7 +29,7 @@ The request body should contain the following parameters:
 | `user_id` | `str` | The distinct ID of the signed in user. | _yes_ |
 | `event` | `str` | The name of the event you are tracking. This can range from "User prompt", "Sign in", "Generation", etc. | _yes_ |
 | `timestamp` | `str` | The timestamp of the event. | _yes_ |
-| `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". Trubrics properties are prefixed with a `$`. | _no_ |
 
 </div>
 
@@ -37,5 +37,3 @@ The request body should contain the following parameters:
 This API contains public endpoints only, that will allow your to write to your Trubrics project. The `x_api_key` is a required header for your request.
 
 --8<-- "utils/api_key.md"
-
---8<-- "utils/trubrics_properties.md"
