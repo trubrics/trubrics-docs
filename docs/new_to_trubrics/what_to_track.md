@@ -21,3 +21,7 @@ You should then look to add `properties` to each event to give context to the ev
 
 - **Converted:**
     - **Plan** - if the event signals a user moving to a paid plan, you could add a property of the plan selected.
+
+## What next?
+
+Now you have a basic understanding of what events to track, you can use our [Javascript](../track_events/sdks/javascript.md) or [Python](../track_events/sdks/python.md) SDKs to track these events.
