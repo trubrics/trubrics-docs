@@ -5,5 +5,4 @@ trubrics.track(
         "country": "USA",
         "company": "Acme",  # Add more properties as needed
     },
-    timestamp=datetime.now()
 )
