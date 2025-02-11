@@ -12,7 +12,7 @@ Firstly, install Trubrics in your project with:
 
 ## Initialise Trubrics
 
-Initialize the Trubrics SDK in your app:
+Then, initialize the Trubrics SDK in your app:
 
 ``` ts
 --8<-- "utils/code_snippets/js/init_optionals.js"
@@ -50,7 +50,7 @@ Finally, track any user action events with:
 
 </div>
 
-## Javascript LLM tracking
+## Track LLM events
 
 In addition to regular events, you may track LLM events (prompts and generations) with:
 
