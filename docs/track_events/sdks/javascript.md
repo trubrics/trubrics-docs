@@ -45,7 +45,7 @@ Finally, track any user action events with:
 |---|:---:|---|:---:|
 | `event` | `string` | The name of the event you want to track. | _yes_ |
 | `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
-| `properties` | `object` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `properties` | `object` | A list of properties of the event. These can be your user properties (e.g. company name) or additional properties of the event (e.g. request latency). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 | `timestamp` | `Date` | The timestamp of the event. This defaults to the current timestamp | _no_ |
 
 </div>
@@ -66,10 +66,8 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `prompt` | `string` | The user's message. | _yes_ |
 | `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
 | `generation` | `string` | The assistant's response. | _yes_ |
-| `properties` | `Record<string, any>` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `properties` | `Record<string, any>` |  A list of properties for both prompts and generations. A single reserved property is `$thread_id` which groups events by conversation thread. Otherwise these can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 | `timestamp` | `Date` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
 | `latency` | `number` | The time in seconds between the prompt and generation | _no_ |
 
 </div>
-
---8<-- "utils/trubrics_properties.md"

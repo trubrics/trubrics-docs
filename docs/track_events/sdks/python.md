@@ -26,7 +26,7 @@ Then, initialise the SDK
 |---|:---:|---|:---:|
 | `api_key` | `str` | Your project API key. | _yes_ |
 | `flush_interval` | `int` | Time in seconds between automatic flushes (default: 10) | _no_ |
-| `flush_at` | `int` | Number of events that trigger a flush (default: 20) | _no_ |
+| `flush_batch_size` | `int` | Number of events that trigger a flush (default: 20) | _no_ |
 | `logger` | `logging.Logger` | A custom logger | _no_ |
 
 </div>
@@ -59,7 +59,7 @@ Finally, track any user action events with:
 |---|:---:|---|:---:|
 | `user_id` | `str` | The distinct ID of the user that is signed in to your app. | _yes_ |
 | `event` | `str` | The name of the event you are tracking. This can range from "User prompt", "Sign in", "Generation", etc. | _yes_ |
-| `properties` | `dict[str,any]` | A list of properties of the event. For example, a "Generation" event could have properties "Cost of generation" or "Prompt template". [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `properties` | `dict[str,any]` | A list of properties of the event. These can be your user properties (e.g. company name) or additional properties of the event (e.g. request latency). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 | `timestamp` | `datetime` | The timestamp of the event. This defaults to the current timestamp | _no_ |
 
 </div>
@@ -80,7 +80,7 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `prompt` | `string` | The user's message. | _yes_ |
 | `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
 | `generation` | `string` | The assistant's response. | _yes_ |
-| `properties` | `dict[str,any]` | A list of properties of the event. [Trubrics properties](#trubrics-properties) are prefixed with a `$`. | _no_ |
+| `properties` | `dict[str,any]` | A list of properties for both prompts and generations. A single reserved property is `$thread_id` which groups events by conversation thread. Otherwise these can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 | `timestamp` | `datetime` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
 | `latency` | `float` | The time in seconds between the prompt and generation | _no_ |
 
@@ -93,5 +93,3 @@ To ensure all events are flushed before terminating your app, you may call the c
 ``` py
 --8<-- "utils/code_snippets/python/close.py"
 ```
-
---8<-- "utils/trubrics_properties.md"
