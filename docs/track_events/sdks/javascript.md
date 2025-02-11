@@ -71,3 +71,5 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `latency` | `number` | The time in seconds between the prompt and generation | _no_ |
 
 </div>
+
+--8<-- "utils/session_id.md"

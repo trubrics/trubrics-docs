@@ -93,3 +93,5 @@ To ensure all events are flushed before terminating your app, you may call the c
 ``` py
 --8<-- "utils/code_snippets/python/close.py"
 ```
+
+--8<-- "utils/session_id.md"
