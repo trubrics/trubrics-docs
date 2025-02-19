@@ -4,20 +4,23 @@ To get started collecting events in your application using Trubrics, consult fir
 
 ```bash
 curl -X 'POST' \
-  'https://app.trubrics.com/api/ingestion/publish_event' \
+  'https://app.trubrics.com/api/ingestion/publish_events' \
+  -H 'accept: application/json' \
+  -H 'x-api-key: TRUBTICS_API_KEY' \
   -H 'Content-Type: application/json' \
-  -H 'x-api-key: TRUBRICS_API_KEY' \
-  -d '{
-  "user_id": "user_id",
-  "event": "LLM generation",
-  "timestamp": "2024-10-09T13:21:46.182Z",
-  "properties": {
-    "$text": "Tell me a joke",
-    "$thread_id": "thread_id",
-    "$assistant_id": "assistant_id",
-    "a_custom_property": "any custom value"
+  -d '[
+  {
+    "user_id": "user_id",
+    "event": "LLM generation",
+    "timestamp": "2024-10-09T13:21:46.182Z",
+    "properties": {
+      "$text": "Tell me a joke",
+      "$thread_id": "thread_id",
+      "$assistant_id": "assistant_id",
+      "a_custom_property": "any custom value"
+    }
   }
-}'
+]'
 ```
 
 The request body should contain the following parameters:
