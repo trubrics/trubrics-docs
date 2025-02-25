@@ -25,8 +25,8 @@ Then, initialize the Trubrics SDK in your app:
 | **Parameter** | **Type** | **Description** | **Required** |
 |---|:---:|---|:---:|
 | `apiKey` | `string` | Your project API key. | _yes_ |
-| `flushInterval` | `number` | Time in ms between automatic flushes (default: 10000) | _no_ |
-| `flushAt` | `number` | Number of events that trigger a flush (default: 20) | _no_ |
+| `flushInterval` | `number` | Time in seconds between automatic flushes (default: 10) | _no_ |
+| `flushBatchSize` | `number` | Number of events that trigger a flush (default: 20) | _no_ |
 | `isVerbose` | `boolean` | Flag to enable verbose logging (default: false) | _no_ |
 
 </div>
@@ -46,7 +46,7 @@ Finally, track any user action events with:
 | `event` | `string` | The name of the event you want to track. | _yes_ |
 | `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
 | `properties` | `object` | A list of properties of the event. These can be your user properties (e.g. company name) or additional properties of the event (e.g. request latency). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
-| `timestamp` | `Date` | The timestamp of the event. This defaults to the current timestamp | _no_ |
+| `timestamp` | `Date` | The timestamp of the event (default: current) | _no_ |
 
 </div>
 
@@ -67,7 +67,7 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
 | `generation` | `string` | The assistant's response. | _yes_ |
 | `properties` | `Record<string, any>` |  A list of properties for both prompts and generations. A single reserved property is `$thread_id` which groups events by conversation thread. Otherwise these can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
-| `timestamp` | `Date` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
+| `timestamp` | `Date` | The timestamp of the generation (default: current) | _no_ |
 | `latency` | `number` | The time in seconds between the prompt and generation | _no_ |
 
 </div>
