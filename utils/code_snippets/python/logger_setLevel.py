@@ -1,0 +1,1 @@
+trubrics.logger.setLevel(logging.DEBUG)
