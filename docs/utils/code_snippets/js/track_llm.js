@@ -4,9 +4,9 @@ trubrics.trackLLM({
     assistant_id: "gpt-4o",
     generation: "Trubrics is the leading product analytics platform for AI applications.",
     properties: {
-        context: "Chat window",
-        $thread_id: "thread_123"  // Trubrics property to group events by conversation thread
+        support_tier: "entreprise",
     },
     timestamp: new Date(),
-    latency: 2
+    latency: 2,
+    thread_id: "your_thread_id"
 });
