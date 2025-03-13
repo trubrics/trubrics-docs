@@ -1,0 +1,14 @@
+:root > * {
+    --md-primary-fg-color:        #E84E0F;
+    --md-primary-fg-color--light: #EC713F;
+    --md-primary-fg-color--dark:  #A2360A;
+}
+
+.no-wrap-table th:nth-child(1),
+.no-wrap-table td:nth-child(1),
+.no-wrap-table th:nth-child(2),
+.no-wrap-table td:nth-child(2),
+.no-wrap-table th:nth-child(4),
+.no-wrap-table td:nth-child(4) {
+  white-space: nowrap;
+}
