@@ -15,7 +15,7 @@ Firstly, install Trubrics in your `venv` with:
 Then, initialise the SDK
 
 ``` py
---8<-- "utils/code_snippets/python/init_optionals.py"
+--8<-- "utils/code_snippets/python/init.py"
 ```
 
 --8<-- "utils/api_key.md"
@@ -78,11 +78,12 @@ In addition to regular events, you may track LLM events (prompts and generations
 |---|:---:|---|:---:|
 | `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
 | `prompt` | `string` | The user's message. | _yes_ |
-| `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _yes_ |
 | `generation` | `string` | The assistant's response. | _yes_ |
-| `properties` | `dict[str,any]` | A list of properties for both prompts and generations. A single reserved property is `$thread_id` which groups events by conversation thread. Otherwise these can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
+| `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _no_ |
+| `properties` | `dict[str,any]` | A list of properties for both prompts and generations. Tthese can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 | `timestamp` | `datetime` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
 | `latency` | `float` | The time in seconds between the prompt and generation | _no_ |
+| `thread_id` | `string` | Groups messages in a thread | _no_ |
 
 </div>
 
