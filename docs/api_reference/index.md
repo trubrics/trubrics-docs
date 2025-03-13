@@ -57,7 +57,7 @@ curl -X 'POST' \
     "prompt": "Hello",
     "generation": "Hello sir",
     "timestamp": "2024-10-09T13:21:46.182Z",
-    "latency": 2.5
+    "latency": 2.5,
     "properties": {
       "$thread_id": "thread_id",
       "a_custom_property": "any custom value"
