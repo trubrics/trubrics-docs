@@ -79,7 +79,7 @@ The request body should contain a list of events with the following parameters:
 | `timestamp` | `Date` | The timestamp of the generation (default: current) | _no_ |
 | `latency` | `float` | The time in seconds between the prompt and generation | _no_ |
 | `prompt_event_name` | `str` | The prompt event name that will appear in Trubrics | _no_ |
-| `generation_event_name` | `str` | The prompt event name that will appear in Trubrics | _no_ |
+| `generation_event_name` | `str` | The generation event name that will appear in Trubrics | _no_ |
 | `properties` | `dict[str,any]` | A list of properties for both prompts and generations. A single reserved property is `$thread_id` which groups events by conversation thread. Otherwise these can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 
 </div>
