@@ -79,6 +79,8 @@ In addition to regular events, you may track LLM events (prompts and generations
 | `user_id` | `string` | The distinct ID of the user that is signed in to your app. | _yes_ |
 | `prompt` | `string` | The user's message. | _yes_ |
 | `generation` | `string` | The assistant's response. | _yes_ |
+| `prompt_event_name` | `string` | The name of the prompt event displayed in the UI. | _no_ |
+| `generation_event_name` | `string` | The name of the generation event displayed in the UI. | _no_ |
 | `assistant_id` | `string` | The AI assistant's ID, typically the model name. | _no_ |
 | `properties` | `dict[str,any]` | A list of properties for both prompts and generations. Tthese can be your custom properties (e.g. cost, number of tokens). Setting properties will allow you to filter and slice analysis in different ways. | _no_ |
 | `timestamp` | `datetime` | The timestamp of the generation. This defaults to the current timestamp | _no_ |
