@@ -1,8 +1,10 @@
 trubrics.track_llm(
     user_id="user_id",
-    prompt="What is Trubrics?",
     assistant_id="gpt4o",
+    prompt="What is Trubrics?",
     generation="Trubrics is the leading product analytics platform for AI applications.",
+    prompt_event_name="User Prompt",
+    generation_event_name="Assistant Generation",
     properties={
         "support_tier": "entreprise",
     },
