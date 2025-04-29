@@ -73,4 +73,12 @@ In addition to regular events, you may track LLM events (prompts and generations
 
 </div>
 
+## Flush events
+
+Events will be kept in a queue for 10 seconds or until the queue reaches 20 events (both configurable on init). In order to manually flush the queue, you may use:
+
+``` ts
+--8<-- "utils/code_snippets/js/flush.js"
+```
+
 --8<-- "utils/session_id.md"
