@@ -2,6 +2,8 @@
 
 Here we'll cover how to collect events from your Javascript application. Our [Javascript](https://www.npmjs.com/package/@trubrics/trubrics) library is designed to be non-blocking and fast, meaning it won't get in the way of your app's performance. It is compatible with client side Javascript as well as server side Node.js. Here's how to get started:
 
+![type:video](https://www.loom.com/embed/01330022d5044b6ea97ff476f58aa29f?sid=780cd8cc-0551-4933-bfa6-35523de20f14)
+
 ## Install
 
 Firstly, install Trubrics in your project with:
