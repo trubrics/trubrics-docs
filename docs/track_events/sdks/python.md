@@ -2,6 +2,8 @@
 
 Here we'll cover how to collect events in python. Our SDK calls are non-blocking and fast, meaning they won't get in the way of your python app's performance.
 
+![type:video](https://www.loom.com/embed/37f3bb26a5684e4eb883ea2d1ffa215d?sid=57577168-93c4-4993-acd2-db34793ca8d4)
+
 ## Install (requires python>3.10)
 
 Firstly, install Trubrics in your `venv` with:

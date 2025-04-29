@@ -65,3 +65,5 @@ extra:
       link: https://www.linkedin.com/company/trubrics
     - icon: fontawesome/brands/discord
       link: https://discord.gg/BPKTNxxz
+plugins:
+  - mkdocs-video
