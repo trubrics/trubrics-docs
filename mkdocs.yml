@@ -38,6 +38,7 @@ nav:
   - Python SDK: track_events/sdks/python.md
   - Integrations:
     - Segment: track_events/integrations/segment.md
+    - Langfuse: track_events/integrations/langfuse.md
   - API reference:
     - api_reference/index.md
 markdown_extensions:
