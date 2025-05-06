@@ -39,6 +39,7 @@ nav:
   - Integrations:
     - Segment: track_events/integrations/segment.md
     - Langfuse: track_events/integrations/langfuse.md
+    - Langsmith: track_events/integrations/langsmith.md
   - API reference:
     - api_reference/index.md
 markdown_extensions:
