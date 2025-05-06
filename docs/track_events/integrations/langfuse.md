@@ -20,6 +20,6 @@ The Langfuse integration allows you to import your Langfuse LLM tracing data dir
 
 Advanced users can customize the mapping rules to fine-tune how Langfuse data is imported into Trubrics, allowing for tailored analytics and insights.
 
-See our tutorial video for more details:
+See our tutorial video for more details about automated integration with mapping rules:
 
 ![type:video](https://www.loom.com/embed/cd2d31d2edd1454d9a2169c578b59467?sid=75a7559a-3efa-411c-b520-c9b3a57bce6b)
